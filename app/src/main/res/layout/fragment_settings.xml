@@ -71,22 +71,25 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
 
-                android:layout_alignParentLeft="true"/>
+                android:layout_alignParentLeft="true" />
 
-
-            <!--    Customizer    -->
-            <FrameLayout
+            <com.github.islamkhsh.CardSliderViewPager
                 android:layout_width="170dp"
                 android:layout_height="144dp"
-                android:id="@+id/elements_frame"
+
+                android:background="@drawable/border_radius"
                 android:layout_alignParentRight="true"
-                android:background="@drawable/border_radius" />
+
+                android:id="@+id/viewPager"
+                app:cardSlider_smallScaleFactor="0.9"
+                app:cardSlider_otherPagesWidth="24dp"
+                app:cardSlider_pageMargin="12dp" />
 
             <FrameLayout
                 android:id="@+id/custom_widgets_frame"
                 android:layout_width="30dp"
                 android:layout_height="144dp"
-                android:layout_alignStart="@+id/elements_frame"
+                android:layout_alignStart="@+id/viewPager"
                 android:layout_alignRight="@+id/colorPicker"
                 android:layout_marginStart="-40dp"
                 android:layout_marginRight="-60dp"
