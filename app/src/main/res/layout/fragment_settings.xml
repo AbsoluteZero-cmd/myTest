@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/blue_main"
     tools:context=".SettingsFragment">
 
@@ -61,35 +62,19 @@
             android:layout_width="match_parent"
             android:layout_height="144dp"
             android:layout_marginTop="32dp"
-            android:layout_marginHorizontal="20dp"
+            android:layout_marginRight="10dp"
             android:layout_below="@+id/tools_menu"
             android:orientation="horizontal">
 
-            <!--    Buttons    -->
-            <LinearLayout
-                android:id="@+id/buttons"
-                android:layout_width="wrap_content"
+            <com.madrapps.pikolo.HSLColorPicker
+                android:id="@+id/colorPicker"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true">
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/button_1"
-                    android:layout_width="90dp"
-                    android:layout_height="48dp"
-                    android:text="Size">
 
-                </androidx.appcompat.widget.AppCompatButton>
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/button_2"
-                    android:layout_width="90dp"
-                    android:layout_height="48dp"
-                    android:text="Color">
+                android:layout_alignParentLeft="true"/>
 
-                </androidx.appcompat.widget.AppCompatButton>
-            </LinearLayout>
 
             <!--    Customizer    -->
             <FrameLayout
@@ -104,7 +89,7 @@
                 android:layout_width="30dp"
                 android:layout_height="144dp"
                 android:layout_alignStart="@+id/elements_frame"
-                android:layout_alignRight="@+id/buttons"
+                android:layout_alignRight="@+id/colorPicker"
                 android:layout_marginStart="-40dp"
                 android:layout_marginRight="-60dp"
                 android:background="@drawable/border_radius" />
@@ -185,6 +170,7 @@
 
             </LinearLayout>
         </LinearLayout>
+
 
     </RelativeLayout>
 </FrameLayout>
