@@ -112,13 +112,17 @@
         </RelativeLayout>
 
 
+        <!--    Task bar    -->
         <LinearLayout
+            android:id="@+id/task_bar"
             android:layout_width="160dp"
             android:layout_height="270dp"
             android:layout_marginTop="350dp"
             android:background="@drawable/dark_border_radius"
-            android:paddingHorizontal="5dp"
-            android:paddingVertical="10dp">
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="10dp"
+            android:gravity="start"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -130,6 +134,56 @@
                 android:textSize="18dp">
 
             </TextView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="2dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Interstage 0/2"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="10dp"
+                    android:drawableLeft="@drawable/baseline_check_24"
+                    android:drawableTint="#4CAF50"
+                    android:drawablePadding="2dp">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Crew 0/4"
+                    android:textColor="@color/white"
+                    android:drawableLeft="@drawable/baseline_check_24"
+                    android:drawableTint="#4CAF50"
+                    android:layout_marginBottom="15dp">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Elements 3/4"
+                    android:textColor="@color/white"
+                    android:drawableLeft="@drawable/baseline_clear_24"
+                    android:drawableTint="#FF0000"
+                    android:layout_marginBottom="15dp">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Parachute 0/2"
+                    android:textColor="@color/white"
+                    android:drawableLeft="@drawable/baseline_clear_24"
+                    android:drawableTint="#FF0000"
+                    android:layout_marginBottom="15dp">
+                </TextView>
+
+            </LinearLayout>
         </LinearLayout>
 
     </RelativeLayout>
