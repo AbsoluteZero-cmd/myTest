@@ -42,4 +42,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
     implementation 'com.github.madrapps:pikolo:2.0.2'
+
+    implementation 'com.github.IslamKhSh:CardSlider:1.0.1'
 }
