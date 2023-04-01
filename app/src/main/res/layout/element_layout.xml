@@ -12,9 +12,9 @@
         android:gravity="center">
 
         <ImageView
-            android:id="@+id/element_image"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:id="@+id/element_item_image"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
             android:src="@drawable/baseline_rocket_launch_24">
 
         </ImageView>
@@ -23,7 +23,9 @@
             android:id="@+id/element_item_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="some text">
+            android:text="some text"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center">
 
         </TextView>
 

@@ -9,8 +9,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
-//import com.jama.carouselview.CarouselView;
 
 import com.github.islamkhsh.CardSliderViewPager;
 import com.madrapps.pikolo.ColorPicker;
@@ -28,9 +29,9 @@ public class SettingsFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        elementArrayList.add(new RocketElement("Nose Cone"));
-        elementArrayList.add(new RocketElement("Body Tube"));
-        elementArrayList.add(new RocketElement("Transition"));
+        elementArrayList.add(new RocketElement("Nose Cone", R.drawable.nose_cone));
+        elementArrayList.add(new RocketElement("Body Tube", R.drawable.body_tube));
+        elementArrayList.add(new RocketElement("Nose Cone Cap", R.drawable.nose_cone_cap));
     }
 
     @Override
@@ -41,7 +42,9 @@ public class SettingsFragment extends Fragment {
         final ColorPicker colorPicker = view.findViewById(R.id.colorPicker);
         final CardSliderViewPager elementsCarousel = (CardSliderViewPager)view.findViewById(R.id.viewPager);
 
-        elementsCarousel.setAdapter(new RocketElementAdapter(elementArrayList));
+        elementsCarousel.setAdapter(new RocketElementAdapter(elementArrayList, getContext()));
+
+
 
         colorPicker.setColorSelectionListener(new SimpleColorSelectionListener() {
             @Override
