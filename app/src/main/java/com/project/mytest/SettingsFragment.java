@@ -5,15 +5,15 @@ import android.os.Bundle;
 
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
-//import com.jama.carouselview.CarouselView;
 
+import com.github.islamkhsh.CardSliderViewPager;
 import com.madrapps.pikolo.ColorPicker;
 import com.madrapps.pikolo.listeners.SimpleColorSelectionListener;
 
@@ -22,16 +22,16 @@ import java.util.ArrayList;
 public class SettingsFragment extends Fragment {
     AppCompatButton sizeButton, colorButton;
 
-    ArrayList<RocketElement> itemsArrayList = new ArrayList<>();
+    ArrayList<RocketElement> elementArrayList = new ArrayList<>();
     int kColor = 0;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        itemsArrayList.add(new RocketElement("Nose Cone"));
-        itemsArrayList.add(new RocketElement("Body Tube"));
-        itemsArrayList.add(new RocketElement("Transition"));
+        elementArrayList.add(new RocketElement("Nose Cone", R.drawable.nose_cone));
+        elementArrayList.add(new RocketElement("Body Tube", R.drawable.body_tube));
+        elementArrayList.add(new RocketElement("Nose Cone Cap", R.drawable.nose_cone_cap));
     }
 
     @Override
@@ -40,7 +40,11 @@ public class SettingsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_settings, container, false);
 
         final ColorPicker colorPicker = view.findViewById(R.id.colorPicker);
-        final View elementsCarousel = view.findViewById(R.id.elements_frame);
+        final CardSliderViewPager elementsCarousel = (CardSliderViewPager)view.findViewById(R.id.viewPager);
+
+        elementsCarousel.setAdapter(new RocketElementAdapter(elementArrayList, getContext()));
+
+
 
         colorPicker.setColorSelectionListener(new SimpleColorSelectionListener() {
             @Override

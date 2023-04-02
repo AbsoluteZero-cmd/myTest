@@ -71,28 +71,60 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
 
+                android:layout_alignParentLeft="true" />
 
-
-                android:layout_alignParentLeft="true"/>
-
-
-            <!--    Customizer    -->
-            <FrameLayout
+            <com.github.islamkhsh.CardSliderViewPager
                 android:layout_width="170dp"
                 android:layout_height="144dp"
-                android:id="@+id/elements_frame"
-                android:layout_alignParentRight="true"
-                android:background="@drawable/border_radius" />
 
-            <FrameLayout
+                android:background="@drawable/border_radius"
+                android:layout_alignParentRight="true"
+
+                android:id="@+id/viewPager"
+                app:cardSlider_smallScaleFactor="0.9"
+                app:cardSlider_otherPagesWidth="24dp"
+                app:cardSlider_pageMargin="12dp" />
+
+            <LinearLayout
                 android:id="@+id/custom_widgets_frame"
                 android:layout_width="30dp"
                 android:layout_height="144dp"
-                android:layout_alignStart="@+id/elements_frame"
+                android:layout_alignStart="@+id/viewPager"
                 android:layout_alignRight="@+id/colorPicker"
                 android:layout_marginStart="-40dp"
                 android:layout_marginRight="-60dp"
-                android:background="@drawable/border_radius" />
+                android:background="@drawable/border_radius"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="S"
+                    android:textSize="10dp">
+
+                </androidx.appcompat.widget.AppCompatButton>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="M"
+                    android:textSize="10dp">
+
+                </androidx.appcompat.widget.AppCompatButton>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="L"
+                    android:textSize="10dp">
+
+                </androidx.appcompat.widget.AppCompatButton>
+
+
+            </LinearLayout>
+
+
+
 
         </RelativeLayout>
 
