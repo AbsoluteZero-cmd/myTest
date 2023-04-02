@@ -4,6 +4,55 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blue_main"
-    tools:context=".HomeFragment">
+    tools:context=".HomeFragment"
+    android:padding="10dp">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <EditText
+            android:id="@+id/rocket_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="100dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Saturn V"
+            android:textColor="@color/white"
+            android:textFontWeight="700"
+            android:textSize="55dp"
+            android:layout_marginBottom="40dp">
+        </EditText>
+        <TextView
+            android:id="@+id/speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rocket_name"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif"
+            android:text="Speed:\n25000km/h"
+            android:textColor="@color/white"
+            android:textSize="16dp">
+        </TextView>
+        <TextView
+            android:id="@+id/fuel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fuel:\n2076500kg"
+            android:textSize="16dp"
+            android:textColor="@color/white"
+            android:layout_below="@id/speed"
+            android:layout_marginBottom="10dp">
+        </TextView>
+        <TextView
+            android:id="@+id/weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weight:\n2900tonnes"
+            android:textSize="16dp"
+            android:textColor="@color/white"
+            android:layout_below="@id/fuel"
+            android:layout_marginBottom="10dp">
+        </TextView>
+    </RelativeLayout>
 </FrameLayout>
