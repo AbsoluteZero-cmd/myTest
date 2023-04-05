@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -42,6 +44,11 @@ public class MainActivity extends AppCompatActivity {
 
         binding.mainLaunchButton.setOnClickListener(v -> {
             Toast.makeText(this, "Launch the rocket", Toast.LENGTH_SHORT).show();
+
+            Intent sceneViewerIntent = new Intent(Intent.ACTION_VIEW);
+            sceneViewerIntent.setData(Uri.parse("https://arvr.google.com/scene-viewer/1.0?file=https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Avocado/glTF/Avocado.gltf"));
+            sceneViewerIntent.setPackage("com.google.android.googlequicksearchbox");
+            startActivity(sceneViewerIntent);
         });
 
     }
