@@ -45,8 +45,17 @@ public class MainActivity extends AppCompatActivity {
         binding.mainLaunchButton.setOnClickListener(v -> {
             Toast.makeText(this, "Launch the rocket", Toast.LENGTH_SHORT).show();
 
+//            Intent sceneViewerIntent = new Intent(Intent.ACTION_VIEW);
+//            Uri intentUri =
+//                    Uri.parse("https://arvr.google.com/scene-viewer/1.0").buildUpon()
+//                            .appendQueryParameter("file", "https://https://absolutezero-cmd.github.io//nicemodel.gltf")
+//                            .build();
+//            sceneViewerIntent.setData(intentUri);
+//            sceneViewerIntent.setPackage("com.google.ar.core");
+//            startActivity(sceneViewerIntent);
+
             Intent sceneViewerIntent = new Intent(Intent.ACTION_VIEW);
-            sceneViewerIntent.setData(Uri.parse("https://arvr.google.com/scene-viewer/1.0?file=https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Avocado/glTF/Avocado.gltf"));
+            sceneViewerIntent.setData(Uri.parse("https://arvr.google.com/scene-viewer/1.0?file=https://absolutezero-cmd.github.io/nicemodel.gltf"));
             sceneViewerIntent.setPackage("com.google.android.googlequicksearchbox");
             startActivity(sceneViewerIntent);
         });
